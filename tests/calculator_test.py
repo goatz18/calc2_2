@@ -63,5 +63,4 @@ def test_calculator_multiply(clear_history):
 
 def test_calculator_division(clear_history):
     """Testing division"""
-    # Double check here for real division test with proper code
-    assert Calculator.divide_numbers(6, 3) == 2
+    assert Calculator.divide_numbers(15, 3) == 5
