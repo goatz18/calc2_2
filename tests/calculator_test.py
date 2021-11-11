@@ -5,11 +5,9 @@ import pytest
 
 from calculator.calculator import Calculator
 
-# this is how you define a function that will run each time you pass it to a test, it is called a fixture
 
-
-@pytest.fixture
-def clear_history():
+@pytest.fixture(name="clear_history")
+def fixture_clear_history():
     Calculator.clear_history()
 
 
@@ -30,7 +28,7 @@ def test_clear_history(clear_history):
     assert Calculator.add_number(3, 2) == 5
     assert Calculator.add_number(4, 2) == 6
     assert Calculator.history_count() == 4
-    assert Calculator.clear_history() == True
+    assert Calculator.clear_history() is True
     assert Calculator.history_count() == 0
 
 
@@ -61,3 +59,9 @@ def test_calculator_subtract(clear_history):
 def test_calculator_multiply(clear_history):
     """ tests multiplication of two numbers"""
     assert Calculator.multiply_numbers(1, 2) == 2
+
+
+def test_calculator_division(clear_history):
+    """Testing division"""
+    # Double check here for real division test with proper code
+    assert Calculator.divide_numbers(6, 3) == 2
