@@ -1,5 +1,4 @@
 """ This is the increment function"""
-# first import the addition namespace
 from calc.addition import Addition
 from calc.subtraction import Subtraction
 from calc.multiplication import Multiplication
@@ -30,7 +29,7 @@ class Calculator:
 
     @staticmethod
     def get_result_of_last_calculation_added_to_history():
-        # -1 gets the last item added to the list automaticly and you can expect it to have the get result method
+        # -1 gets the last item added to the list automatically and you can expect it to have the get result method
         return Calculator.history[-1].getResult()
 
     @staticmethod
@@ -55,6 +54,7 @@ class Calculator:
     @staticmethod
     def multiply_numbers(value_a, value_b):
         """ multiply two numbers and store the result"""
+        multiplication = Multiplication.create(value_a, value_b)
         # this is a shorthand way to create the multiplication object and added it the history in one line
-        Calculator.add_calculation_to_history(Multiplication.create(value_a, value_b))
+        Calculator.add_calculation_to_history(multiplication)
         return Calculator.get_result_of_last_calculation_added_to_history()

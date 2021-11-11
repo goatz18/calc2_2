@@ -3,7 +3,7 @@
 from calc.calculation import Calculation
 
 
-class Multiplication(Calculation):
+class Division(Calculation):
     """Division is easy..."""
-    def get_result(self):
+    def get_Result(self):
         return self.value_a * self.value_b
