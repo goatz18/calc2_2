@@ -10,6 +10,7 @@ class Calculator:
     # this is the calculator static property
     history = []
 
+    # Needs staticmethod for get history
     @staticmethod
     def get_result_of_first_calculation_added_to_history():
         return Calculator.history[0].get_result()
