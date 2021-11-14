@@ -3,6 +3,9 @@
 
 class Calculation:
 
+    # pylint: disable=too-few-public-methods
+    # pylint: disable=missing-function-docstring
+    # pylint: disable=missing-class-docstring
     # constructor and it is the first function called when an object of the class is instantiated
     def __init__(self, value_a, value_b):
         # self references the instantiated object of the class
