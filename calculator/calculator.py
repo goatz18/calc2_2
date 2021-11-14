@@ -6,6 +6,7 @@ from calc.division import Division
 
 
 class Calculator:
+    # pylint: disable=missing-function-docstring
     """ This is the Calculator class"""
     # this is the calculator static property
     history = []

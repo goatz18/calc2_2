@@ -133,6 +133,9 @@ never-returning-functions=sys.exit,argparse.parse_error
 
 [BASIC]
 
+# Disabled the minimum public methods error
+min-public-methods=0
+
 # Naming style matching correct argument names.
 argument-naming-style=snake_case
 
